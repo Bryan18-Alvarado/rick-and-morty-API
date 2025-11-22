@@ -1,15 +1,11 @@
-import { Text, View } from "react-native";
+import { ListCharacter } from '@/components/ListCharacter'
+import { View } from 'react-native'
+import { styles } from '../styles/index.style'
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+    <View style={styles.container}>
+      <ListCharacter />
     </View>
-  );
+  )
 }
