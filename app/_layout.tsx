@@ -1,4 +1,5 @@
 import { ListCharacter } from '@/components/ListCharacter'
+import { CharacterProvider } from '@/context/CharacterProvider'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { Stack } from 'expo-router'
 
@@ -6,8 +7,10 @@ const queryClient = new QueryClient()
 export default function RootLayout() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Stack />
-      <ListCharacter />
+      <CharacterProvider>
+        <Stack />
+        <ListCharacter />
+      </CharacterProvider>
     </QueryClientProvider>
   )
 }
