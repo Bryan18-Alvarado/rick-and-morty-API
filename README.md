@@ -1,6 +1,6 @@
 # Welcome to your Rick and Morty App 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+La presente app tiene como finalidad, consumir la api de Rick and Morty.
 
 ## Get started
 
