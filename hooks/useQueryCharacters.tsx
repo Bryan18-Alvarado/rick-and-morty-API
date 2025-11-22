@@ -1,12 +1,12 @@
 import { API_URL } from '@/config/config'
-import { Character } from '@/interface/character'
 import { useQuery } from '@tanstack/react-query'
 
 export const useQueryCharacters = () => {
   const getCharacters = async () => {
     try {
       const response = await fetch(`${API_URL}/character`)
-      return (await response.json()) as Character[]
+      const data = await response.json()
+      return data.results
     } catch (error) {
       console.log('error fetching data:', error)
     }

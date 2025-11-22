@@ -20,13 +20,13 @@ export const CharacterProvider = ({
   const { data, isLoading, isError } = useQueryCharacters()
 
   return (
-    <CharacterContext
+    <CharacterContext.Provider
       value={{
         resources: { data, isLoading, isError },
       }}
     >
       {children}
-    </CharacterContext>
+    </CharacterContext.Provider>
   )
 }
 
